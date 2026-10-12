@@ -1,0 +1,28 @@
+{
+  "executed_at_utc": "2026-10-12T20:39:09.847039+00:00",
+  "execution": "live_azure_foundry_notebook",
+  "notebook": "notebooks/01_foundry_chat.ipynb",
+  "python_version": "3.14.4",
+  "completed_requests": 3,
+  "total_tokens": 1174,
+  "usage": [
+    {
+      "check": "known policy",
+      "input_tokens": 267,
+      "output_tokens": 67,
+      "total_tokens": 334
+    },
+    {
+      "check": "follow-up",
+      "input_tokens": 300,
+      "output_tokens": 161,
+      "total_tokens": 461
+    },
+    {
+      "check": "missing information",
+      "input_tokens": 270,
+      "output_tokens": 109,
+      "total_tokens": 379
+    }
+  ]
+}

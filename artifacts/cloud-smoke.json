@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "evaluation_revision": 2,
+  "instructions_sha256": "ed2289953d22577e10d33f8ea2e31d9f23da85d71aeede2879d5825ba66ac4a6",
+  "request_settings": {
+    "max_output_tokens": 1200,
+    "reasoning_effort": null
+  },
+  "executed_at_utc": "2026-10-12T20:37:04.728649+00:00",
+  "execution": "live_azure_foundry",
+  "authentication": "Microsoft Entra ID via DefaultAzureCredential",
+  "api": "Responses API through AIProjectClient.get_openai_client()",
+  "data": "Repository-owned fictional HarborWorks FAQ and three fixed prompts",
+  "python_version": "3.14.4",
+  "dependencies": {
+    "azure-ai-projects": "2.8.0",
+    "azure-identity": "1.26.0",
+    "openai": "3.29.0"
+  },
+  "all_checks_passed": true,
+  "total_tokens": 1420,
+  "checks": [
+    {
+      "name": "known_policy",
+      "question": "Who can approve a maintenance window?",
+      "uses_previous_response": false,
+      "answer": "Only the operations coordinator can approve a maintenance window.",
+      "status": "completed",
+      "passed": true,
+      "model": "gpt-5-mini",
+      "latency_seconds": 3.151,
+      "input_tokens": 267,
+      "output_tokens": 69,
+      "total_tokens": 336
+    },
+    {
+      "name": "follow_up_context",
+      "question": "Which role did you just mention? Reply with that role only.",
+      "uses_previous_response": true,
+      "answer": "Operations coordinator",
+      "status": "completed",
+      "passed": true,
+      "model": "gpt-5-mini",
+      "latency_seconds": 3.501,
+      "input_tokens": 300,
+      "output_tokens": 319,
+      "total_tokens": 619
+    },
+    {
+      "name": "missing_information",
+      "question": "What is the price of an urgent maintenance service?",
+      "uses_previous_response": false,
+      "answer": "The FAQ does not specify that.",
+      "status": "completed",
+      "passed": true,
+      "model": "gpt-5-mini",
+      "latency_seconds": 3.274,
+      "input_tokens": 270,
+      "output_tokens": 195,
+      "total_tokens": 465
+    }
+  ]
+}

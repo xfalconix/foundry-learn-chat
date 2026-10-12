@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+artifacts/*
+!artifacts/README.md
+!artifacts/cloud-smoke.json
+!artifacts/cloud-smoke-initial.json
+!artifacts/notebook-execution.json

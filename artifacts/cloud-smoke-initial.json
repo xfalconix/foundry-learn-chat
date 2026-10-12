@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "executed_at_utc": "2026-10-12T20:34:13.981994+00:00",
+  "execution": "live_azure_foundry",
+  "authentication": "Microsoft Entra ID via DefaultAzureCredential",
+  "api": "Responses API through AIProjectClient.get_openai_client()",
+  "data": "Repository-owned fictional HarborWorks FAQ and three fixed prompts",
+  "python_version": "3.14.4",
+  "dependencies": {
+    "azure-ai-projects": "2.8.0",
+    "azure-identity": "1.26.0",
+    "openai": "3.29.0"
+  },
+  "all_checks_passed": false,
+  "total_tokens": 1189,
+  "checks": [
+    {
+      "name": "known_policy",
+      "question": "Who can approve a maintenance window?",
+      "uses_previous_response": false,
+      "answer": "Only the operations coordinator can approve a maintenance window.",
+      "status": "completed",
+      "passed": true,
+      "model": "gpt-5-mini",
+      "latency_seconds": 5.733,
+      "input_tokens": 245,
+      "output_tokens": 113,
+      "total_tokens": 358
+    },
+    {
+      "name": "follow_up_context",
+      "question": "What is their responsibility in this process?",
+      "uses_previous_response": true,
+      "answer": "The FAQ does not specify that.",
+      "status": "completed",
+      "passed": false,
+      "model": "gpt-5-mini",
+      "latency_seconds": 2.433,
+      "input_tokens": 273,
+      "output_tokens": 148,
+      "total_tokens": 421
+    },
+    {
+      "name": "missing_information",
+      "question": "What is the price of an urgent maintenance service?",
+      "uses_previous_response": false,
+      "answer": "The FAQ does not specify that.",
+      "status": "completed",
+      "passed": true,
+      "model": "gpt-5-mini",
+      "latency_seconds": 2.55,
+      "input_tokens": 248,
+      "output_tokens": 162,
+      "total_tokens": 410
+    }
+  ]
+}
